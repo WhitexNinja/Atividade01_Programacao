@@ -1,8 +1,9 @@
 import { Button, Avatar, Input } from 'react-native-elements';
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
 
-const PrimeiraTela = ({navigation}) => {
+const TelaLogin = ({navigation}) => {
     return (
         <View style={styles.container}>
               <StatusBar style="auto" />
@@ -14,7 +15,7 @@ const PrimeiraTela = ({navigation}) => {
                   uri:
                     'https://avatars.githubusercontent.com/u/152277272?s=400&u=c2db24400bb47417a550ac75630c57dc4e292f26&v=4'
                 }}/>
-              <Text><br></br></Text>
+              <Text>{"\n"}</Text>
               <Text style={styles.string}>Email</Text>
               <TextInput
                 style={{
@@ -31,17 +32,17 @@ const PrimeiraTela = ({navigation}) => {
                   width: 200,
                 }}
               ></TextInput>
-              <Text><br></br></Text>
-              <Button type='solid' title={"Logar"} buttonStyle={styles.button} onPress={() => navigation.navigate('Login')}></Button>
-              <Text><br></br></Text>
+              <Text>{"\n"}</Text>
+              <Button type='solid' title={"Logar"} buttonStyle={styles.button} /*onPress={() => navigation.navigate('Login')}*/></Button>
+              <Text>{"\n"}</Text>
               <Button type='solid' title={"Cadastre-se"} buttonStyle={styles.button} onPress={() => navigation.navigate('Cadastro')}></Button>
-              <Text><br></br></Text>
-              <Text style={styles.string}>Esqueceu a senha?</Text>
+              <Text>{"\n"}</Text>
+              <Text style={styles.string} onPress={() => navigation.navigate('EsqueciSenha')}>Esqueceu a senha?</Text>
             </View>
     );
 };
 
-export default PrimeiraTela;
+export default TelaLogin;
 
 const styles = StyleSheet.create({
     container: {
