@@ -1,30 +1,49 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, Avatar } from 'react-native-elements';
+import { Button, Avatar, Input } from 'react-native-elements';
 import React from 'react';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.string}>Eliel Peixoto Teófilo de Jesus</Text>
       <StatusBar style="auto" />
 
+
       <Avatar
+        size="xlarge"
         rounded
         source={{
           uri:
-            ''
+            'https://avatars.githubusercontent.com/u/152277272?s=400&u=c2db24400bb47417a550ac75630c57dc4e292f26&v=4'
         }}/>
-      <Text>Email</Text>
-      <TextInput></TextInput>
-      <Text>Senha</Text>
-      <TextInput></TextInput>
-      <Button type='solid'>Logar</Button>
-      <Button type='solid'>Cadastre-se</Button>
-      <Text>Esqueceu a senha?</Text>
+      <Text><br></br></Text>
+      <Text style={styles.string}>Email</Text>
+      <TextInput
+        style={{
+          backgroundColor: 'white',
+          height: 30,
+          width: 200,
+        }}
+      ></TextInput>
+      <Text style={styles.string}>Senha</Text>
+      <TextInput
+        style={{
+          backgroundColor: 'white',
+          height: 30,
+          width: 200,
+        }}
+      ></TextInput>
+      <Text><br></br></Text>
+      <Button type='solid' title={"Logar"} buttonStyle={styles.button}></Button>
+      <Text><br></br></Text>
+      <Button type='solid' title={"Cadastre-se"} buttonStyle={styles.button}></Button>
+      <Text><br></br></Text>
+      <Text style={styles.string}>Esqueceu a senha?</Text>
     </View>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -34,11 +53,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 
+
   string: {
     color: 'white',
-    border: '5px solid darkblue',
-    fontFamily: 'Times New Roman',
-    fontSize: 40,
+    fontSize: 20,
     fontWeight: 'bold',
+  },
+
+
+  button: {
+    backgroundColor: '#2F4F4F',
+    borderRadius: 10
   }
 });
