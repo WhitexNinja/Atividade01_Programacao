@@ -32,9 +32,9 @@ const PrimeiraTela = ({navigation}) => {
                 }}
               ></TextInput>
               <Text><br></br></Text>
-              <Button type='solid' title={"Logar"} buttonStyle={styles.button}></Button>
+              <Button type='solid' title={"Logar"} buttonStyle={styles.button} onPress={() => navigation.navigate('Login')}></Button>
               <Text><br></br></Text>
-              <Button type='solid' title={"Cadastre-se"} buttonStyle={styles.button} onPress={()=>navigation.navigate('Cadastro')}></Button>
+              <Button type='solid' title={"Cadastre-se"} buttonStyle={styles.button} onPress={() => navigation.navigate('Cadastro')}></Button>
               <Text><br></br></Text>
               <Text style={styles.string}>Esqueceu a senha?</Text>
             </View>
