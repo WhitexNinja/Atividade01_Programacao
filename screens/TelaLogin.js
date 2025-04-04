@@ -19,7 +19,7 @@ const TelaLogin = ({navigation}) => {
               <TextInput style={styles.input}></TextInput>
               <Text style={styles.string}>Senha</Text>
               <TextInput style={styles.input}></TextInput>
-              <Button type='solid' title={"Logar"} buttonStyle={styles.button} /*onPress={() => navigation.navigate('Login')}*/></Button>
+              <Button type='solid' title={"Logar"} buttonStyle={styles.button} onPress={() => alert('Login realizado!')}/*onPress={() => navigation.navigate('Login')}*/></Button>
               <Button type='solid' title={"Cadastre-se"} buttonStyle={styles.button} onPress={() => navigation.navigate('Cadastro')}></Button>
               <Text style={styles.string} onPress={() => navigation.navigate('EsqueciSenha')}>Esqueceu a senha?</Text>
             </View>

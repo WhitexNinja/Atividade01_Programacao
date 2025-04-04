@@ -1,19 +1,19 @@
 import React from 'react';
 import { Button } from 'react-native-elements';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet, TextInput} from 'react-native';
 
 const TelaEsqSenha = ({navigation}) => {
     return (
-        <View>
-           <Text>Email</Text>
-            <TextInput></TextInput>
-            
-            <Button type='solid' title={"Voltar para Login"} /*buttonStyle={styles.button}*/ onPress={() => navigation.navigate('Login')}></Button>
+        <View style={styles.container}>
+          <Text style={styles.string}>Email</Text>
+          <TextInput style={styles.input}></TextInput>
+          <Button type='solid' title={"Enviar"} buttonStyle={styles.button} onPress={() => alert('Mensagem enviada para o seu email. Favor verificar.')}></Button>
+          <Button type='solid' title={"Voltar"} buttonStyle={styles.button} onPress={() => navigation.navigate('Login')}></Button>
         </View>
     )
 };
 
-/*const styles = StyleSheet.create({
+const styles = StyleSheet.create({
     input: {
       backgroundColor: 'white',
       height: 30,
@@ -40,6 +40,6 @@ const TelaEsqSenha = ({navigation}) => {
       padding: 10,
       marginTop: 20
     }
-  });*/
+  });
 
 export default TelaEsqSenha;

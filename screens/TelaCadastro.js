@@ -12,8 +12,8 @@ const TelaCadastro = ({ navigation }) => {
       <TextInput style={styles.input}></TextInput>
       <Text style={styles.string}>Senha</Text>
       <TextInput style={styles.input}></TextInput>
-      <Button type='solid' title={"Cadastrar"} buttonStyle={styles.button} onPress={() => alert('Você foi cadastrado!')}></Button>
-      <Button type='solid' title={"Voltar para Login"} buttonStyle={styles.button} onPress={() => navigation.navigate('Login')} />
+      <Button type='solid' title={"Cadastrar"} buttonStyle={styles.button} onPress={() => alert('Cadastrado com sucesso!')}></Button>
+      <Button type='solid' title={"Voltar"} buttonStyle={styles.button} onPress={() => navigation.navigate('Login')} />
     </View>
   );
 };
