@@ -15,28 +15,12 @@ const TelaLogin = ({navigation}) => {
                   uri:
                     'https://avatars.githubusercontent.com/u/152277272?s=400&u=c2db24400bb47417a550ac75630c57dc4e292f26&v=4'
                 }}/>
-              <Text>{"\n"}</Text>
               <Text style={styles.string}>Email</Text>
-              <TextInput
-                style={{
-                  backgroundColor: 'white',
-                  height: 30,
-                  width: 200,
-                }}
-              ></TextInput>
+              <TextInput style={styles.input}></TextInput>
               <Text style={styles.string}>Senha</Text>
-              <TextInput
-                style={{
-                  backgroundColor: 'white',
-                  height: 30,
-                  width: 200,
-                }}
-              ></TextInput>
-              <Text>{"\n"}</Text>
+              <TextInput style={styles.input}></TextInput>
               <Button type='solid' title={"Logar"} buttonStyle={styles.button} /*onPress={() => navigation.navigate('Login')}*/></Button>
-              <Text>{"\n"}</Text>
               <Button type='solid' title={"Cadastre-se"} buttonStyle={styles.button} onPress={() => navigation.navigate('Cadastro')}></Button>
-              <Text>{"\n"}</Text>
               <Text style={styles.string} onPress={() => navigation.navigate('EsqueciSenha')}>Esqueceu a senha?</Text>
             </View>
     );
@@ -57,11 +41,21 @@ const styles = StyleSheet.create({
       color: 'white',
       fontSize: 20,
       fontWeight: 'bold',
+      margin: 15
     },
   
   
     button: {
       backgroundColor: '#2F4F4F',
-      borderRadius: 10
+      borderRadius: 10,
+      padding: 10,
+      marginTop: 20
+    },
+
+    input: {
+      backgroundColor: 'white',
+      height: 30,
+      width: 200,
     }
+
   });
